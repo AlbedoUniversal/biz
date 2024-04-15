@@ -1,0 +1,31 @@
+<li class='card' data-id='{{crmID}}' data-card-name='{{crmText}}'>
+	<p class='badge'>{{badgeText}}</p>
+	<img src={{image}} alt='card-1' />
+	<div class='card-content'>
+		<h3>{{title}}</h3>
+		<p class='card-description'>{{description}}</p>
+		<ul class='card-tag-list'>
+			{{#each tags}}
+				<li class='card-tag'>{{this}}</li>
+			{{/each}}
+		</ul>
+		<div id='space'></div>
+		<div class='card-actions'>
+			{{#if href}}
+
+				<a
+					href='{{href}}'
+					target='_blank'
+					class='button-primary card-button'
+					onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'go_to_the_website'});ym(53115394, 'reachGoal', 'go_to_the_website'); return true;"
+				>Подробнее</a>
+
+			{{/if}}
+			<a
+				href='#consultation-form'
+				class='button-secondary card-button get-consultation'
+				onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'get_consultation'});ym(53115394, 'reachGoal', 'get_consultation', {location_click: 'main_banner'}); return true;"
+			>Получить консультацию</a>
+		</div>
+	</div>
+</li>

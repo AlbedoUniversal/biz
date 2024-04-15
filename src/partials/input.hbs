@@ -1,0 +1,10 @@
+<div class="input-root">
+	<input
+		{{#if required}}{{required}}{{/if}}
+		class="input-body" name={{#if name}}{{name}}{{else}}'text'{{/if}}
+		type={{#if type}}{{type}}{{else}}'text'{{/if}}
+		placeholder={{#if placeholder}}{{placeholder}}{{else}}''{{/if}}
+		{{#if pattern}}pattern='{{pattern}}'{{/if}}
+		/>
+	<label class="input-label">{{label}} {{#if required}}<span>*</span>{{/if}}</label>
+</div>

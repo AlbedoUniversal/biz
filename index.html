@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
+		<title>
+			Поддержка бизнеса от Департамента предпринимательства и инновационного
+			развития Москвы
+		</title>
+		<meta
+			name="viewport"
+			content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0;"
+		/>
+		<meta
+			property="og:title"
+			content="Поддержка бизнеса от Департамента предпринимательства и инновационного развития Москвы"
+		/>
+		<meta
+			property="og:description"
+			content="Здесь вы найдете актуальные сведения о программах, грантах, субсидиях и других формах помощи для предпринимателей. Подайте заявку для получения государственной поддержки вашего бизнеса"
+		/>
+		<meta property="og:image" content="/og.png" />
+		<meta property="og:url" content="https://moscow.business/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="moscow.business" />
+		<meta property="og:locale" content="ru_RU" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+
+		<link rel="icon" type="image/png" href="/favicon/16x16.png" sizes="16x16" />
+		<link rel="icon" type="image/png" href="/favicon/32x32.png" sizes="32x32" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+		<!-- Yandex.Metrika counter -->
+		<script type="text/javascript">
+			(function (m, e, t, r, i, k, a) {
+				m[i] =
+					m[i] ||
+					function () {
+						(m[i].a = m[i].a || []).push(arguments);
+					};
+				m[i].l = 1 * new Date();
+				for (var j = 0; j < document.scripts.length; j++) {
+					if (document.scripts[j].src === r) {
+						return;
+					}
+				}
+				(k = e.createElement(t)),
+					(a = e.getElementsByTagName(t)[0]),
+					(k.async = 1),
+					(k.src = r),
+					a.parentNode.insertBefore(k, a);
+			})(
+				window,
+				document,
+				'script',
+				'https://mc.yandex.ru/metrika/tag.js',
+				'ym',
+			);
+
+			ym(53115394, 'init', {
+				clickmap: true,
+				trackLinks: true,
+				accurateTrackBounce: true,
+				webvisor: true,
+				trackHash: true,
+			});
+		</script>
+
+		<!-- /Yandex.Metrika counter -->
+
+		<!-- Top.Mail.Ru counter -->
+		<script type="text/javascript">
+			var _tmr = window._tmr || (window._tmr = []);
+			_tmr.push({
+				id: '3495983',
+				type: 'pageView',
+				start: new Date().getTime(),
+			});
+			(function (d, w, id) {
+				if (d.getElementById(id)) return;
+				var ts = d.createElement('script');
+				ts.type = 'text/javascript';
+				ts.async = true;
+				ts.id = id;
+				ts.src = 'https://top-fwz1.mail.ru/js/code.js';
+				var f = function () {
+					var s = d.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(ts, s);
+				};
+				if (w.opera == '[object Opera]') {
+					d.addEventListener('DOMContentLoaded', f, false);
+				} else {
+					f();
+				}
+			})(document, window, 'tmr-code');
+		</script>
+
+		<!-- /Top.Mail.Ru counter -->
+	</head>
+	<body>
+		{{> header }}
+		<main>{{> deal }} {{> cards }}</main>
+
+		{{> footer }}
+
+		<button class="backButton hidden">
+			<div class="arrow"></div>
+			<span class="hidden-describe">Вернуться наверх</span>
+		</button>
+
+		<script>
+			document.addEventListener('scroll', function () {
+				var scrollPosition = window.scrollY;
+				var windowHeight = window.innerHeight;
+				var button = document.querySelector('.backButton');
+
+				if (scrollPosition > windowHeight) {
+					button.classList.add('show');
+					button.classList.remove('hidden');
+				} else {
+					button.classList.remove('show');
+					button.classList.add('hidden');
+				}
+			});
+
+			document
+				.querySelector('.backButton')
+				.addEventListener('click', function () {
+					const sectionToScroll = document.querySelector('#financial-support');
+
+					sectionToScroll.scrollIntoView({ behavior: 'smooth' });
+				});
+		</script>
+
+		<script>
+			const form = document.getElementById('formElement');
+			const cardButtons = document.querySelectorAll('.card-button');
+			cardButtons.forEach((button) => {
+				button.addEventListener('click', function () {
+					const card = this.closest('.card');
+					const cardId = card.getAttribute('data-id');
+					const cardName = card.getAttribute('data-card-name');
+					form.setAttribute('data-cardId', cardId);
+					form.setAttribute('data-cardName', cardName);
+				});
+			});
+		</script>
+
+		<script type="module" src="/src/js/main.ts"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<!-- <script>
+			var swiper = new Swiper('.mySwiper', {
+				direction: 'vertical',
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			});
+		</script> -->
+		<noscript
+			><div>
+				<img
+					src="https://top-fwz1.mail.ru/counter?id=3415186;js=na"
+					style="position: absolute; left: -9999px"
+					alt="Top.Mail.Ru"
+				/></div
+		></noscript>
+		<noscript
+			><div>
+				<img
+					src="https://mc.yandex.ru/watch/53115394"
+					style="position: absolute; left: -9999px"
+					alt=""
+				/></div
+		></noscript>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+.header {
+	background-color: var(--main-bg);
+	position: fixed;
+	z-index: 4;
+	width: 100%;
+	max-width: 1281px;
+	margin-inline: auto;
+	padding-inline: 14px;
+	padding-block-start: 28px;
+	padding-block-end: 24px;
+	right: 0;
+	left: 0;
+
+	display: flex;
+	justify-content: space-between;
+
+	@media (max-width: 1200px) {
+		padding-block-start: 22px;
+		padding-block-end: 18px;
+	}
+
+	@media (max-width: 768px) {
+		padding-block-start: 14px;
+		padding-block-end: 12px;
+	}
+
+	.navigation {
+		display: flex;
+		align-items: center;
+		gap: 7px;
+	}
+
+	.logoLink {
+		@media (max-width: 414px) {
+			img {
+				width: 80%;
+			}
+		}
+	}
+
+	.actions {
+		display: flex;
+		gap: 7px;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	.write {
+		color: var(--main-red);
+	}
+
+	.tel {
+		color: var(--main-dark);
+	}
+	.write,
+	.tel {
+		padding-inline: 15px;
+		padding-block: 7px;
+
+		font-size: 14px;
+		line-height: 1.1;
+		letter-spacing: 0.28px;
+	}
+
+	.socials {
+		display: flex;
+		align-items: center;
+		gap: 7px;
+	}
+
+	.social svg {
+		color: #000000;
+		transition: color 0.3s;
+	}
+
+	.social {
+		display: flex;
+		padding-block: 7px;
+		padding-inline: 10px;
+
+		&:hover {
+			svg {
+				color: var(--main-red);
+			}
+		}
+	}
+}

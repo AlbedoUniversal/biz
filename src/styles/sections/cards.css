@@ -1,0 +1,42 @@
+.cards {
+	position: relative;
+	@mixin responsive padding-inline, 14, 80;
+	@mixin responsive padding-block-start, 60, 130;
+	@mixin responsive padding-block-end, 60, 130;
+
+	h2 {
+		color: var(--main-dark);
+		font-size: 54px;
+		font-weight: 500;
+		line-height: normal;
+		letter-spacing: 1.08px;
+		margin-block-end: 70px;
+
+		line-height: 1.1;
+
+		@media (max-width: 1200px) {
+			font-size: 38px;
+		}
+		@media (max-width: 768px) {
+			br {
+				display: none;
+			}
+		}
+	}
+}
+
+.cards-list {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+	row-gap: 60px;
+
+	@media (max-width: 991px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 768px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

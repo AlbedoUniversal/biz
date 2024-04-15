@@ -1,0 +1,261 @@
+<footer id="consultation-form" class="footer-container">
+	<section class="footer-form-wrapper">
+		<section class="footer-text-block">
+			<h1>
+				<span class="text-hightlight">
+					Развивайтесь с нами:
+				</span>
+				от поддержки и идеи до выхода на экспорт!
+			</h1>
+			<h2>
+				Заполните форму, мы свяжемся с вами в ближайшее время и проконсультируем вас
+			</h2>
+		</section>
+		<form class="footer-form" id="formElement" data-formId="">
+			<div class="footer-form__content">
+			{{> input required='required' name='Contact' label='Ваше имя' }}
+			{{> input required='required' name='MobilePhone' type='tel' label='Номер телефона' }}
+			{{> input pattern='[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$' required='required' name='Email' type='email' label='E-mail' }}
+			{{> input name='Account' label='Наименование организации' placeholder='Необязательно' }}
+			{{> input name='InpInn' type='text' label='ИНН организации' pattern="^\d{10}(\d{2})?$" placeholder='Необязательно' }}
+			<input type="hidden" name="LeadType" value="Субсидия" />
+			<input type="hidden" name="UF_CRM_PODKATEGORIYA" value="" />
+			<button class="footer-form-button">Жду звонка</button>
+			</div>
+				<div class="footer-form-inputs">
+					<div class="footer-form-inputs__box">
+						<label class="custom-checkbox">
+							<input name="UF_CRM_INPAPROVEPERSONALDATA" type="checkbox" class="footer-form-inputs__input" required checked />
+							<span class="checkmark"></span>
+						</label>
+						<p class="footer-warning">
+							Подтверждаю согласие на обработку <a href="/user-agreement.pdf" target="_blank" rel="noopener noreferrer" class="text-hightlight-dark">персональных данных</a> и <a href="/privacy-policy.pdf" target="_blank" rel="noopener noreferrer" class="text-hightlight-dark">политику конфиденциальности</a>
+						</p>
+
+					</div>
+					<div class="footer-form-inputs__box">
+						<label class="custom-checkbox">
+							<input name="UF_CRM_JETCONSENTTOMAILING" type="checkbox" class="footer-form-inputs__input" checked />
+							<span class="checkmark"></span>
+						</label>
+						<p class="footer-warning">
+								Хочу получать полезную рассылĸу
+						</p>
+					</div>
+				<div>
+			</form>
+		</form>
+				<div id="successPopup" class="success-popup" style="display: none">
+			<p>Ваша заявка принята. Мы свяжемся с вами в самое ближайшее время!</p>
+		</div>
+	</section>
+	<section class="footer-bottom">
+		<a href="/">
+			<img src='/src/assets/icons/logo-white.svg' alt='logo' />
+		</a>
+		<div class="footer-info">
+			<div class="footer-links">
+				<a href="/privacy-policy.pdf" target="_blank" rel="noopener noreferrer"
+					class="footer-privacy-policy">Политика конфиденциальности</a>
+				<a href="mailto:dpir-press@mos.ru">dpir-press@mos.ru</a>
+			</div>
+			<div class="footer-socials">
+				<a href="https://t.me/subsidii_msk/" target="_blank" onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'click_to_go_to_messenger_social_network'});ym(53115394, 'reachGoal', 'click_to_go_to_messenger_social_network'); return true;">
+					<img src="/src/assets/icons/tg_icon-white.svg" alt="Telegram">
+				</a>
+				<a href="https://vk.com/dpirmos" target="_blank" onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'click_to_go_to_messenger_social_network'});ym(53115394, 'reachGoal', 'click_to_go_to_messenger_social_network'); return true;">
+					<img src="/src/assets/icons/vk_icon-white.svg" alt="Telegram">
+				</a>
+			</div>
+		</div>
+	</section>
+</footer>
+
+<script>
+				function setCookie(name, value, days) {
+				var date = new Date();
+				date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+				var expires = '; expires=' + date.toGMTString();
+				document.cookie = name + '=' + value + expires + ';path=/';
+			}
+			function getParam(p) {
+				var match = RegExp('[?&]' + p + '=([^&]*)').exec(
+					window.location.search,
+				);
+				return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+			}
+			var yclid = getParam('yclid');
+			if (yclid) {
+				setCookie('yclid', yclid, 90);
+			}
+
+
+	let successPopupTimeout;
+
+
+let scrollToCardDataId = null;
+	document.querySelectorAll('.card .get-consultation').forEach(button => {
+    button.addEventListener('click', function() {
+ 			const card = this.closest('.card');
+			  if (card && card.dataset.id) {
+                scrollToCardDataId = card.dataset.id;
+								console.log(scrollToCardDataId)
+            }
+    });
+});
+
+	document.querySelector('[name="InpInn"]').addEventListener('input', function() {
+        this.value = this.value.replace(/\D/g, '');
+    });
+
+	document.querySelector('input[name="MobilePhone"]').addEventListener('input', function (e) {
+		const x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+		e.target.value = !x[2] ? x[1] : '+7 (' + x[2] + ') ' + x[3] + (x[4] ? '-' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+	});
+	document.querySelector('input[name="MobilePhone"]').addEventListener('keydown', function (e) {
+		if (e.key === 'Backspace') {
+
+			if(e.target.value.length === 9) {
+				e.target.value = '';
+			}
+		}
+	});
+
+	    function showSuccessPopup() {
+        const successPopup = document.getElementById('successPopup');
+        if (successPopup) {
+            successPopup.style.display = 'block';
+            setTimeout(() => successPopup.style.display = 'none', 5000);
+        }
+    }
+
+			/**
+			* Прокручивает страницу к карточке с заданным data-id после успешной отправки формы.
+			* Ожидает 2 секунды перед прокруткой, чтобы пользователь успел прочитать текст всплывающего уведомления.
+			* @param {string} dataId Data-id карточки для прокрутки.
+			*/
+			function scrollToCard(dataId) {
+					if (!dataId) return;
+
+					setTimeout(() => {
+							const cardToScroll = document.querySelector(`.card[data-id='${dataId}']`);
+							if (cardToScroll) {
+									cardToScroll.scrollIntoView({ behavior: 'smooth' });
+									scrollToCardDataId = null; // Сбрасываем data-id после прокрутки
+							}
+					}, 2000); // Задержка 2 секунды перед прокруткой
+			}
+
+	formElement.onsubmit = async (e) => {
+		clearTimeout(successPopupTimeout);
+		e.preventDefault();
+		const formData = new FormData(e.target) ?? '';
+		let cardId = form.getAttribute('data-cardId');
+		const cardName = form.getAttribute('data-cardName');
+
+		const formFieldsData = [];
+		const queryParams = new URLSearchParams(window.location.search);
+		const utmFields = {
+			Inpwutmcampaign: queryParams.get('utm_campaign') || '',
+			Inpwutmmedium: queryParams.get('utm_medium') || '',
+			Inpwutmsource: queryParams.get('utm_source') || '',
+			Inpwutmterm: queryParams.get('utm_term') || '',
+			Inpwutmcontent: queryParams.get('utm_content') || ''
+		};
+
+		Object.entries(utmFields).forEach(([key, value]) => {
+			formFieldsData.push({ name: key, value: value });
+		});
+
+		if (cardId && cardName) {
+			formFieldsData.push({ name: "InpVidSLID", value: cardName });
+		} else {
+			formFieldsData.push({ name: "InpVidSLID", value: "Обратная Связь. Субсидии" });
+		}
+			formData.forEach((value, key) => {
+		if (e.target[key].type === 'checkbox') {
+				formFieldsData.push({ name: key, value: e.target[key].checked });
+		} else {
+				formFieldsData.push({ name: key, value: value });
+		}
+});
+
+		formFieldsData.push({name: "BpmHref", value: `${window.location.href}`})
+		formFieldsData.push({name: "Commentary", value: ''})
+		formFieldsData.push({name: "InpStringCommentsLK", value: ''})
+		formFieldsData.push({name: "Inpyaid", value: '53115394'})
+		formFieldsData.push({name: "Inpyacid", value: yclid || ''})
+		formFieldsData.push({name: "UF_CRM_WEBSITE", value: `${window.location.href}`})
+
+		const dataToSend = {
+			formData: {
+				formId: '8db5432e-2761-4902-accb-b5436cee7722',
+				contactFieldsData: [],
+				formFieldsData: formFieldsData,
+				options: {
+					extendResponseWithExceptionType: true
+				}
+			}
+		};
+
+		try {
+			let response = await fetch('https://cp.moscow-export.com/rest/773/v3lauws2elvtk0ko/TerraSoft.SaveWebFormObjectData.json', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(dataToSend)
+			});
+
+			if (!response.ok) {
+				throw new Error('Network response was not ok');
+			}
+
+			_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'send_form_call' });
+			ym(53115394, 'reachGoal', 'send_form_call');
+
+			const successPopup = document.getElementById('successPopup');
+			successPopup.style.display = 'block';
+			const result = await response.json();
+
+			e.target.reset();
+  		showSuccessPopup();
+      scrollToCard(scrollToCardDataId);
+			formElement.removeAttribute('data-cardId');
+      formElement.removeAttribute('data-cardName');
+
+		} catch (error) {
+			console.error('Ошибка:', error);
+		}
+	};
+</script>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+			const form = document.getElementById('formElement');
+			const submitButton = form.querySelector('.footer-form-button');
+
+			const toggleButtonState = () => {
+					let isFormValid = true;
+
+					form.querySelectorAll('input[required]:not([type="checkbox"]), textarea[required]').forEach(input => {
+							if (!input.value.trim() || !input.checkValidity()) isFormValid = false;
+					});
+
+					form.querySelectorAll('input[type="checkbox"][required]').forEach(checkbox => {
+							if (!checkbox.checked) isFormValid = false;
+					});
+
+					submitButton.disabled = !isFormValid;
+			};
+
+			toggleButtonState();
+
+			form.querySelectorAll('input, textarea').forEach(input => {
+					input.addEventListener('input', toggleButtonState);
+					if (input.type === "checkbox" || input.type === "radio") {
+							input.addEventListener('change', toggleButtonState);
+					}
+			});
+	});
+</script>
