@@ -1,6 +1,9 @@
 .cards {
 	position: relative;
-	@mixin responsive padding-inline, 14, 80;
+	padding-inline: 0 !important;
+	@media (max-width: 1320px) {
+		padding-inline: 14px !important;
+	}
 	@mixin responsive padding-block-start, 60, 130;
 	@mixin responsive padding-block-end, 60, 130;
 

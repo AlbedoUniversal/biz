@@ -48,7 +48,7 @@
 		font-size: 26px;
 		font-weight: 500;
 		line-height: 120%;
-		letter-spacing: 0.52px;
+		letter-spacing: 0;
 
 		@media (max-width: 991px) {
 			font-size: 20px;
