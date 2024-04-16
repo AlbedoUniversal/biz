@@ -1,4 +1,5 @@
 .input-root {
+	width: 100%;
 	padding: 12px 0px 20px;
 	background-color: var(--secondary-bg);
 	overflow: hidden;
@@ -11,7 +12,8 @@
 }
 
 .input-body {
-	padding-inline: 16px;
+	padding-inline-end: 16px;
+	padding-inline-start: 19px;
 
 	&::-webkit-outer-spin-button,
 	&::-webkit-inner-spin-button {
@@ -33,6 +35,7 @@
 	width: 100%;
 	position: relative;
 	font-size: 14px;
+	font-weight: 500;
 	z-index: 3;
 	background-color: transparent;
 	outline: none;

@@ -3,6 +3,7 @@ import { defineConfig } from 'vite';
 import { createHtmlPlugin } from 'vite-plugin-html';
 import handlebars from 'vite-plugin-handlebars';
 import { mainCards } from './src/js/cards';
+// import autoprefixer from 'autoprefixer';
 
 export default defineConfig({
 	base: '',
@@ -33,4 +34,7 @@ export default defineConfig({
 			},
 		}),
 	],
+	css: {
+		postcss: './postcss.config.js',
+	},
 });

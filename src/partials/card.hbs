@@ -1,9 +1,13 @@
 <li class='card' data-id='{{crmID}}' data-card-name='{{crmText}}'>
-	<p class='badge'>{{badgeText}}</p>
+	<header class='badges'>
+		{{#each badges}}
+			<p class='badge'>{{this}}</p>
+		{{/each}}
+	</header>
 	<img src={{image}} alt='card-1' />
 	<div class='card-content'>
-		<h3>{{title}}</h3>
-		<p class='card-description'>{{description}}</p>
+		<h3>{{{title}}}</h3>
+		<p class='card-description'>{{{description}}}</p>
 		<ul class='card-tag-list'>
 			{{#each tags}}
 				<li class='card-tag'>{{this}}</li>
@@ -24,7 +28,7 @@
 			<a
 				href='#consultation-form'
 				class='button-secondary card-button get-consultation'
-				onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'get_consultation'});ym(53115394, 'reachGoal', 'get_consultation', {location_click: 'main_banner'}); return true;"
+				onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'click_on_applicat_quest_cb_consult_ord_er_buttonk'});ym(53115394, 'reachGoal', 'click_on_applicat_quest_cb_consult_ord_er_buttonk', {location_click: 'main_banner', URL: document.location.href, goal: 'click_on_applicat_quest_cb_consult_ord_er_buttonk'}); return true;"
 			>Получить консультацию</a>
 		</div>
 	</div>

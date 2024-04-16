@@ -5,6 +5,7 @@
 		type={{#if type}}{{type}}{{else}}'text'{{/if}}
 		placeholder={{#if placeholder}}{{placeholder}}{{else}}''{{/if}}
 		{{#if pattern}}pattern='{{pattern}}'{{/if}}
+		{{#if onclick}}onclick='{{onclick}}'{{/if}}
 		/>
-	<label class="input-label">{{label}} {{#if required}}<span>*</span>{{/if}}</label>
+	<label class="input-label">{{label}} {{#if required}}<span></span>{{/if}}</label>
 </div>

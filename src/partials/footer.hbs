@@ -3,24 +3,29 @@
 		<section class="footer-text-block">
 			<h1>
 				<span class="text-hightlight">
-					Развивайтесь с нами:
+					Развивайтесь с&nbsp;нами:
 				</span>
-				от поддержки и идеи до выхода на экспорт!
+				от&nbsp;поддержки и&nbsp;идеи до&nbsp;выхода на&nbsp;экспорт!
 			</h1>
 			<h2>
-				Заполните форму, мы свяжемся с вами в ближайшее время и проконсультируем вас
+				Заполните форму, мы&nbsp;свяжемся с&nbsp;вами в&nbsp;ближайшее время и&nbsp;проконсультируем вас
 			</h2>
 		</section>
 		<form class="footer-form" id="formElement" data-formId="">
 			<div class="footer-form__content">
-			{{> input required='required' name='Contact' label='Ваше имя' }}
+			{{> input required='required' name='Contact' label='Ваше имя' onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'filling_in_the_form'});ym(53115394, 'reachGoal', 'filling_in_the_form', {URL: document.location.href, goal: 'filling_in_the_form'}); return true;" }}
 			{{> input required='required' name='MobilePhone' type='tel' label='Номер телефона' }}
 			{{> input pattern='[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$' required='required' name='Email' type='email' label='E-mail' }}
-			{{> input name='Account' label='Наименование организации' placeholder='Необязательно' }}
+			{{!-- {{> input name='Account' label='Наименование организации' placeholder='Необязательно' }} --}}
 			{{> input name='InpInn' type='text' label='ИНН организации' pattern="^\d{10}(\d{2})?$" placeholder='Необязательно' }}
 			<input type="hidden" name="LeadType" value="Субсидия" />
 			<input type="hidden" name="UF_CRM_PODKATEGORIYA" value="" />
-			<button class="footer-form-button">Жду звонка</button>
+			<button
+				onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'click_on_applicat_quest_cb_consult_ord_er_buttonk'});ym(53115394, 'reachGoal', 'click_on_applicat_quest_cb_consult_ord_er_buttonk', {location_click: 'main_banner', URL: document.location.href, goal: 'click_on_applicat_quest_cb_consult_ord_er_buttonk'}); return true;"
+				class="footer-form-button"
+			>
+				Жду&nbsp;звонка!
+			</button>
 			</div>
 				<div class="footer-form-inputs">
 					<div class="footer-form-inputs__box">
@@ -57,18 +62,21 @@
 			<div class="footer-links">
 				<a href="/privacy-policy.pdf" target="_blank" rel="noopener noreferrer"
 					class="footer-privacy-policy">Политика конфиденциальности</a>
-				<a href="mailto:dpir-press@mos.ru">dpir-press@mos.ru</a>
+				<a onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'email_click'});ym(53115394, 'reachGoal', 'email_click', {URL: document.location.href, goal: 'email_click'}); return true;" href="mailto:dpir-press@mos.ru">dpir-press@mos.ru</a>
 			</div>
 			<div class="footer-socials">
-				<a href="https://t.me/subsidii_msk/" target="_blank" onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'click_to_go_to_messenger_social_network'});ym(53115394, 'reachGoal', 'click_to_go_to_messenger_social_network'); return true;">
+				<a href="https://t.me/subsidii_msk/" target="_blank" onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'click_to_go_to_messenger_social_network'});ym(53115394, 'reachGoal', 'click_to_go_to_messenger_social_network', {URL: document.location.href, goal: 'click_to_go_to_messenger_social_network'}); return true;">
 					<img src="/src/assets/icons/tg_icon-white.svg" alt="Telegram">
 				</a>
-				<a href="https://vk.com/dpirmos" target="_blank" onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'click_to_go_to_messenger_social_network'});ym(53115394, 'reachGoal', 'click_to_go_to_messenger_social_network'); return true;">
+				<a href="https://vk.com/dpirmos" target="_blank" onclick="_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'click_to_go_to_messenger_social_network'});ym(53115394, 'reachGoal', 'click_to_go_to_messenger_social_network', {URL: document.location.href, goal: 'click_to_go_to_messenger_social_network'}); return true;">
 					<img src="/src/assets/icons/vk_icon-white.svg" alt="Telegram">
 				</a>
 			</div>
 		</div>
 	</section>
+		<address class="footer-address">
+			125009, г. Москва, Романов переулок, д. 4 стр. 2
+		</address>
 </footer>
 
 <script>
@@ -182,6 +190,7 @@ let scrollToCardDataId = null;
 
 		formFieldsData.push({name: "BpmHref", value: `${window.location.href}`})
 		formFieldsData.push({name: "Commentary", value: ''})
+		formFieldsData.push({name: "Account", value: ''})
 		formFieldsData.push({name: "InpStringCommentsLK", value: ''})
 		formFieldsData.push({name: "Inpyaid", value: '53115394'})
 		formFieldsData.push({name: "Inpyacid", value: yclid || ''})
@@ -211,7 +220,8 @@ let scrollToCardDataId = null;
 				throw new Error('Network response was not ok');
 			}
 
-			_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'send_form_call' });
+			//_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'send_form_call' });
+			_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'sending_an_application_form_quest_cb_consult_ord_er'});ym(53115394, 'reachGoal', 'sending_an_application_form_quest_cb_consult_ord_er', {URL: document.location.href, goal: 'sending_an_application_form_quest_cb_consult_ord_er'}); return true;
 			ym(53115394, 'reachGoal', 'send_form_call');
 
 			const successPopup = document.getElementById('successPopup');
