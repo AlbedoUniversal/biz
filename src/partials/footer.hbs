@@ -219,11 +219,9 @@ let scrollToCardDataId = null;
 			if (!response.ok) {
 				throw new Error('Network response was not ok');
 			}
-
 			//_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'send_form_call' });
-			_tmr.push({ type: 'reachGoal', id: 3495983, goal: 'sending_an_application_form_quest_cb_consult_ord_er'});ym(53115394, 'reachGoal', 'sending_an_application_form_quest_cb_consult_ord_er', {URL: document.location.href, goal: 'sending_an_application_form_quest_cb_consult_ord_er'}); return true;
-			ym(53115394, 'reachGoal', 'send_form_call');
-
+			// _tmr.push({ type: 'reachGoal', id: 3495983, goal: 'sending_an_application_form_quest_cb_consult_ord_er'});ym(53115394, 'reachGoal', 'sending_an_application_form_quest_cb_consult_ord_er', {URL: document.location.href, goal: 'sending_an_application_form_quest_cb_consult_ord_er'}); return true;
+			// ym(53115394, 'reachGoal', 'send_form_call');
 			const successPopup = document.getElementById('successPopup');
 			successPopup.style.display = 'block';
 			const result = await response.json();
