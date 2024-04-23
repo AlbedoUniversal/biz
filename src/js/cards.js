@@ -15,12 +15,12 @@ export const mainCards = [
 		crmID: 527917,
 		crmText: 'Грант на экспорт',
 		description:
-			'Кэшбек до&nbsp;20% от&nbsp;экспортного договора, компенсационный грант до&nbsp;10&nbsp;млн ₽&nbsp;за&nbsp;экспорт продукции.',
+			'Компенсируйте затраты до&nbsp;10&nbsp;млн&nbsp;₽&nbsp;за&nbsp;экспорт продукции!',
 		tags: ['ИТ', 'Производство', 'Наука'],
 		image: 'src/assets/images/card-2.png',
 		href: 'https://moscow-export.com/grant/',
 	},
-	{
+	/* {
 		badges: ['Развитие своего дела', 'Инвестиции'],
 		title: 'Льготное кредитование',
 		crmID: 1383,
@@ -53,7 +53,7 @@ export const mainCards = [
 		tags: ['ИТ', 'Производство', 'Наука'],
 		image: 'src/assets/images/card-5.png',
 		href: 'https://cashback.moscow.business/grant-public-training/&sa=D&source=editors&ust=1711021464217231&usg=AOvVaw15GISumDdeyHjb_NaKYqXX',
-	},
+	}, */
 	{
 		badges: ['Инвестиции', 'Интеллектуальная собственность'],
 		badgeText: 'Инновации',
