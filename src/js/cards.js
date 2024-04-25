@@ -100,6 +100,17 @@ export const mainCards = [
 		image: 'src/assets/images/card-9.png',
 		href: 'https://i.moscow/invest/angel',
 	},
+	{
+		badges: ['Развитие своего дела', 'Инвестиции'],
+		title: 'Поручительство по кредиту',
+		crmID: 1448,
+		crmText: 'Поручительство по кредитам',
+		description:
+			'Получите поручительство от&nbsp;города до&nbsp;70% от&nbsp;суммы кредита, если не&nbsp;хватает собственных залоговых средств.',
+		tags: ['Финансовые меры поддержки', 'Инвестиции'],
+		image: 'src/assets/images/card-11.jpg',
+		href: 'https://fskmb.ru/',
+	},
 	// {
 	// 	badges: ['Развитие', 'Инновации'],
 	// 	title: 'Субсидия на развитие технопарков',
