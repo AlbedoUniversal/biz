@@ -8,6 +8,7 @@ export const mainCards = [
 		tags: ['ИТ', 'Производство', 'Наука'],
 		image: 'src/assets/images/card-1.png',
 		href: 'https://i.moscow/grant_na_razvitie',
+		site: 'grant_na_razvitie',
 	},
 	{
 		badges: ['Инвестиции', 'Экспорт'],
@@ -19,6 +20,7 @@ export const mainCards = [
 		tags: ['ИТ', 'Производство', 'Наука'],
 		image: 'src/assets/images/card-2.png',
 		href: 'https://moscow-export.com/grant/',
+		site: 'grant',
 	},
 	/* {
 		badges: ['Развитие своего дела', 'Инвестиции'],
@@ -66,6 +68,7 @@ export const mainCards = [
 		tags: ['ИТ', 'Производство', 'Наука'],
 		image: 'src/assets/images/card-6.png',
 		href: 'https://i.moscow/patent_inventions ',
+		site: 'patent_inventions',
 	},
 	{
 		badges: ['Инвестиции', 'Интеллектуальная собственность'],
@@ -77,6 +80,7 @@ export const mainCards = [
 		tags: ['ИТ', 'Производство', 'Наука'],
 		image: 'src/assets/images/card-7.png',
 		href: 'https://i.moscow/patent_grant',
+		site: 'patent_grant',
 	},
 	{
 		badges: ['Инвестиции', 'Проверить свою идею'],
@@ -88,6 +92,7 @@ export const mainCards = [
 		tags: ['ИТ', 'Производство', 'Наука'],
 		image: 'src/assets/images/card-8.png',
 		href: 'https://i.moscow/platforms/lending/',
+		site: 'platforms_lending',
 	},
 	{
 		badges: ['Инвестиции'],
@@ -99,6 +104,7 @@ export const mainCards = [
 		tags: ['Для всех отраслей'],
 		image: 'src/assets/images/card-9.png',
 		href: 'https://i.moscow/invest/angel',
+		site: 'invest_angel',
 	},
 	{
 		badges: ['Развитие своего дела', 'Инвестиции'],
@@ -110,6 +116,7 @@ export const mainCards = [
 		tags: ['Финансовые меры поддержки', 'Инвестиции'],
 		image: 'src/assets/images/card-11.jpg',
 		href: 'https://fskmb.ru/',
+		site: '',
 	},
 	// {
 	// 	badges: ['Развитие', 'Инновации'],
