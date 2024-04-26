@@ -116,7 +116,7 @@ export const mainCards = [
 		tags: ['Финансовые меры поддержки', 'Инвестиции'],
 		image: 'src/assets/images/card-11.jpg',
 		href: 'https://fskmb.ru/',
-		site: '',
+		site: 'fskmb',
 	},
 	// {
 	// 	badges: ['Развитие', 'Инновации'],
